@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js基础3</title>
+</head>
+<body>
+<script>
+    // // if语句
+    // var year = prompt('请输入您的出生年份！');
+    // var age = 2023 - parseInt(year);
+    // if (age>=18) {
+    //     alert('恭喜你已成年，可以考驾照了！');
+    // }
+
+    // // if-else语句
+    // // 生成0-100整数
+    // var num = parseInt(Math.random()*99+1);
+    // if (num%2 == 0){
+    //     alert(num+'为偶数');
+    // } else {
+    //     alert(num+'为奇数');
+    // }
+
+
+    // // if-else嵌套使用
+    // var score = parseFloat(prompt('请输入成绩！'));
+    // if (score<60) {
+    //     alert('不及格');
+    // } else {
+    //     if (score<70) {
+    //         alert('及格')
+    //     } else {
+    //         if (score<80) {
+    //             alert('中等');
+    //         } else {
+    //             if (score<90) {
+    //                 alert('良好');
+    //             } else {
+    //                 alert('优秀');
+    //             }
+    //         }
+    //     }
+    // }
+
+
+    // // if-else if -else 改写
+    // var score = parseFloat(prompt('请输入成绩'));
+    // if (score<60 && score>=0) {
+    //     alert('不及格');
+    // } else if (score<70) {
+    //     alert('及格');
+    // } else if (score<80) {
+    //     alert('中等');
+    // } else if (score<90) {
+    //     alert('良好');
+    // } else if (score<=100) {
+    //     alert('优秀');
+    // } else {
+    //     alert('非法数值！');
+    // }
+
+
+
+    // // switch语句
+    // // 四则运算计算器
+    // var num1 = parseFloat(prompt('请输入第一个数'));
+    // var num2 = parseFloat(prompt('请输入第二个数'));
+    // var result;
+    // // 获取操作符输入
+    // var operator = prompt('请输入操作符：+，-，*，/');
+    // switch (operator) {
+    //     case '+':
+    //         result = num1 + num2;
+    //         alert('两数相加和为'+result);
+    //         break;
+    //     case '-':
+    //         result = num1 - num2;
+    //         alert('两数相减差为'+result);
+    //         break;
+    //     case '*':
+    //         result = num1 * num2;
+    //         alert('两数乘积为'+result);
+    //         break;
+    //     case '/':
+    //         result = num1 / num2;
+    //         alert('两数相除商为'+result);
+    //         break;
+    //     default:
+    //         alert('非法操作符');
+    // }
+
+    // // 多个case一起使用相同代码的switch语句
+    // var fruit = prompt('请输入水果！');
+    // switch (fruit) {
+    //     case '苹果':
+    //     case '香蕉':
+    //     case '葡萄':
+    //     case '榴莲':
+    //         alert('该水果有货，可以购买');
+    //         break;
+    //     default:
+    //         alert('已售空！');
+    // }
+
+
+    // // for循环执行相同代码
+    // for (var i = 1;i<=10;i++){
+    //     console.log('明早上早八！别起床晚了！');
+    // }
+
+    // // for循环执行不同代码
+    // var age = parseInt(prompt('请输入您的年龄'));
+    // for (var i = 1;i <= age;i++) {
+    //     if (i<18) {
+    //         var num1 = 18 - i;
+    //         console.log('还有'+num1+'年可以解除防沉迷系统');
+    //     }  else {
+    //         console.log('恭喜你已经成年，可以正常游玩！');
+    //     }
+    // }
+
+
+
+
+    // for循环求1-100内奇数与偶数的和
+    var odd = 0;
+    var even = 0;
+    for (var i = 1;i<=100;i++){
+        if (i%2 ==0){
+            even += i;
+        } else {
+            odd += i;
+        }
+    }
+    console.log('1-100内所有偶数的和为'+even);
+    console.log('1-100内所有奇数的和为'+odd);
+
+    // 输出1-100内所有质数并求和
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

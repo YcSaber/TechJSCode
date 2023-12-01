@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js基础下4</title>
+</head>
+<body>
+<script>
+    // // 创建二维数组
+    // var info = new Array(
+    //     new Array('20220101','张三'),
+    //     new Array('20220102','李四')
+    // );
+    // console.log(info);
+    // console.log(info[0]);
+    // console.log(info[1][1]);
+    //
+    // var num1 = [[1,2,3],[4,5,6],[7,8,9]];
+    // console.log(num1[1]);
+    // console.log(num1[1][2]);
+
+
+    // // 二维数组求和（先遍历，再求和）
+    // var arr = [[124,36,598],[142,5,124,73],[532,9]];
+    // // arr.length获取的是行数
+    // console.log(arr.length);
+    // var sum = 0;
+    // // 外层循环，控制的是二维数组的行数
+    // for (var i=0;i<arr.length;i++) {
+    //     // 内层循环，控制二维数组的列数,
+    //     // arr[i].length为索引值为第i行的长度（列数）
+    //     for (var j=0;j<arr[i].length;j++) {
+    //         console.log(arr[i][j]);
+    //         sum += arr[i][j];
+    //     }
+    // }
+    // console.log('数组遍历的和为'+sum);
+
+
+
+
+    // // 定义一个4*4的二维数组，输出该数组对角线元素之和
+    // var arr = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]];
+    // var s1 =0,s2 = 0;
+    // for (var i=0;i<arr.length;i++) {
+    //     s1 += arr[i][i];
+    //     s2 += arr[i][arr.length-i-1];
+    // }
+    // console.log(s1,s2);
+
+
+
+    // 二维数组的转置
+    var arr = [['a','b','c'],['d','e','f'],['g','h','i'],['j','k','l']];
+    var res = [];
+    console.log(arr);
+    // 外层为arr遍历列数，是res的行数
+    for (var i=0;i<arr[0].length;i++) {
+        res[i] = [];
+        // 内层为遍历arr的长度，是res的列数
+        for (var j=0;j<arr.length;j++) {
+            res[i][j] = arr[j][i];
+        }
+    }
+    console.log(res);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

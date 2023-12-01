@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js基础下2</title>
+</head>
+<body>
+<script>
+    // // 数组遍历取最大值
+    // var arr1 = [34,657,334,52,97,25,75,689,44];
+    // var max = arr1[0];
+    // for (var i=1;i<arr1.length;i++) {
+    //     if (arr1[i]>max) {
+    //         max = arr1[i];
+    //     }
+    // }
+    // console.log(max);
+
+
+    // // 数组转换为字符串
+    // var arr2 = ['计应221','计应222','计应223','计应224','计应225'];
+    // var str = arr2[0];
+    // var sep = '|';
+    // for (var i = 1;i<arr2.length;i++) {
+    //     str += sep + arr2[i];
+    // }
+    // console.log(str);
+    // var arr3 = ['计应221','计应222','计应223','计应224','计应225'];
+    // console.log(arr3.toString());
+    // console.log(arr3);
+    // console.log(arr3.join('|'));
+
+    // // 修改数组长度
+    // var arr = [1,2,3,4,5];
+    // arr.length = 8;
+    // console.log(arr);
+    // console.log(arr[6]);
+    // arr.length = 3;
+    // console.log(arr);
+
+
+    // // 新增和修改数组元素
+    // // 修改元素
+    // var arr = ['JavaScript','数据库','PHP','CAD'];
+    // arr[3] = 'Python';
+    // console.log(arr);
+    // // 新增元素
+    // arr[4] = 'CAD';
+    // console.log(arr);
+    // // 在数组结尾添加新的元素
+    // arr.push('PhotoShop');
+    // console.log(arr);
+    // // 在数组开头添加新的元素
+    // arr.unshift('网络运维');
+    // console.log(arr);
+
+    // // 筛选数组元素，所有大于等于10的放入新的数组中
+    // var arr = [1,5,6,26,574,22,71,18,2345,11,145,1,6,87,6,5,43,10];
+    // var newArr = [];
+    // for (var i = 0;i<arr.length;i++) {
+    //     if (arr[i]>=10) {
+    //         newArr.push(arr[i]);
+    //     }
+    // }
+    // console.log(newArr);
+
+    // // 删除指定数组元素
+    // var arr1 = [2,3,405,50,3,5,0,5,0,2,5,6,0,235,56,3,5,6,0,3,5,0,2,56,0,6,2,6,0,235,5,264,2,2,5,0];
+    // console.log(arr1);
+    // var newArr = [];
+    // for (var i=0;i<arr1.length;i++) {
+    //     if (arr1[i]!=0) {
+    //         newArr.push(arr1[i]);
+    //     }
+    // }
+    // console.log(newArr);
+    // // 数组元素删除
+    // var arr2 = [2,3,405,50,3,5,0,5,0,2,5,6,0,235,56,3,5,6,0,3,5,0,2,56,0,6,2,6,0,235,5,264,2,2,5,0];
+    // console.log(arr2);
+    // for (var i =0;i<arr2.length;i++) {
+    //     if (arr2[i]==0) {
+    //         // splice()删除数组当中的元素。并且不留空洞。
+    //         // splice(元素位置,删除个数)
+    //         arr2.splice(i,1);
+    //     }
+    // }
+    // console.log(arr2);
+
+    // // splice()删除元素事例
+    // var arr3 = [1,2,3,4,5,6];
+    // console.log(arr3.splice(3,2));
+    // console.log(arr3);
+
+    // // splice()向数组添加新项，并可以选择添加位置
+    // var menu = ['锅包肉','鱼香肉丝','尖椒肉段','地三鲜'];
+    // console.log(menu);
+    // menu.push('酸菜炖粉条');
+    // console.log(menu);
+    // // splice('添加新元素的位置',0,添加元素)
+    // menu.splice(3,0,'红烧肉','烤鱼');
+    // console.log(menu);
+    // // splice()删除后再添加
+    // menu.splice(3,1,'孜然羊肉','烤鸭');
+    // console.log(menu);
+
+    // 反转数组元素
+    var menu = ['锅包肉','鱼香肉丝','尖椒肉段','地三鲜'];
+    var newArr = [];
+    for (var i=0;i<menu.length;i++) {
+        newArr.unshift(menu[i]);
+    }
+    console.log(newArr);
+
+
+
+
+
+
+</script>
+</body>
+</html>

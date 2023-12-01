@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js基础下1</title>
+</head>
+<body>
+<script>
+    // // 作业1：根据输入的数值，返回对应星期几
+    // var num = prompt('请输入数字（1-7）');
+    // switch (num) {
+    //     case '1':
+    //         alert('星期一');
+    //         break;
+    //     case '2':
+    //         alert('星期二');
+    //         break;
+    //     case '3':
+    //         alert('星期三');
+    //         break;
+    //     case '4':
+    //         alert('星期四');
+    //         break;
+    //     case '5':
+    //         alert('星期五');
+    //         break;
+    //     case '6':
+    //         alert('星期六');
+    //         break;
+    //     case '7':
+    //         alert('星期日');
+    //         break;
+    //     default:
+    //         alert('非法输入，请输入1-7之间的数字');
+    // }
+
+
+    // // 作业2：比较两个数的最大值并返回结果
+    // var num1 = parseFloat(prompt('请输入第一个数'));
+    // var num2 = parseFloat(prompt('请输入第二个数'));
+    // if (num1>=num2) {
+    //     alert('较大的数是：'+ num1);
+    // } else {
+    //     alert('较大的数是：'+ num2);
+    // }
+
+
+
+
+   // // 求1-100之间所有质数，并求和
+   //  var sum = 0;
+   //  // 找出1-100内所有的质数
+   //  for (var i = 2; i <= 100; i++) {
+   //      // 2-i所有的整数都与i做模运算，查看是否为质数
+   //      // 质数标记
+   //      var flag = true;
+   //      for (var j = 2; j < i; j++) {
+   //          // 判断i是否不是质数
+   //          if (i%j ==0) {
+   //              flag = false;
+   //          }
+   //      }
+   //      if (flag) {
+   //          // 输出质数
+   //          console.log(i);
+   //          // 求和
+   //          sum += i; // sum = sum +i;
+   //      }
+   //  }
+   //  console.log(sum);
+
+    // // 生成i行j列的星星图案
+    // var rows = parseInt(prompt('请输入行数'));
+    // var cols = parseInt(prompt('请输入列数'));
+    // var str = '';
+    // for (var i = 1;i <= rows; i++) {
+    //     for (var j = 1;j<= cols; j++) {
+    //         str += '*';
+    //     }
+    //     str += '\n';
+    // }
+    // console.log(str);
+
+
+    // // 生成正三角星星图案
+    // var rows = parseInt(prompt('请输入行数（>1）'));
+    // var str = '';
+    // if (rows>1) {
+    //     // 控制行数
+    //     for (var i = 1;i<=rows;i++) {
+    //         // 控制列数
+    //         for (var j = 1;j <= i;j++) {
+    //             str += '*';
+    //         }
+    //         str += '\n';
+    //     }
+    //     console.log(str);
+    // } else {
+    //     console.log('非法输入');
+    // }
+
+
+    // // 生成正梯形星星图案
+    // var rows = parseInt(prompt('请输入行数（>1）'));
+    // var rows2 = parseInt(prompt('请输入从第几行开始输出'));
+    // var str = '';
+    // if (rows>1) {
+    //     // 控制行数
+    //     for (var i = rows2;i<=rows;i++) {
+    //         // 控制列数
+    //         for (var j = 1;j <= i;j++) {
+    //             str += '*';
+    //         }
+    //         str += '\n';
+    //     }
+    //     console.log(str);
+    // } else {
+    //     console.log('非法输入');
+    // }
+
+    // // 生成九九乘法表
+    // var str = '';
+    // for (var i = 1;i<=9;i++) {
+    //     for (var j = 1;j <= i;j++) {
+    //         str += j+'x'+i+'='+j*i+'\t';
+    //     }
+    //     str += '\n';
+    // }
+    // console.log(str);
+
+
+    // // while循环例子
+    // var i = 1;
+    // var sum = 0;
+    // while (i<=100) {
+    //     sum+=i;
+    //     i++
+    // }
+    // console.log(sum);
+
+    // // do-while循环例子
+    // var i = 10;
+    // do {
+    //     console.log(i);
+    //     ++i;
+    // } while (i>100);
+
+
+    // // continue的使用
+    // for (var i =1;i<100;i++) {
+    //     if (i%3==0) {
+    //         continue;
+    //     }
+    //     console.log(i);
+    // }
+
+    // // break使用
+    // for (var i=1;i<=10;i++) {
+    //     console.log('我吃了第'+i+'个包子');
+    //     if (i==7) {
+    //         console.log('我吃饱了,剩下'+(10-i)+'个包子打包带走');
+    //         break;
+    //     }
+    // }
+
+
+    // 创建数组
+    // var arr1 = new Array();
+    // var arr2 = [];
+    var arr1 = new Array('计应221','计应222','计应223','计应224','计应225');
+    var arr2 = ['计应221','计应222','计应223','计应224','计应225'];
+    var arr3 = [1245,'asdg','1251',true,null,undefined];
+    var arr4 = [1,125,'asdg',[1,2,'sfdg'],235];
+
+
+    // 数组遍历
+    for (var i = 0;i<arr4.length;i++) {
+        console.log(arr4[i]);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

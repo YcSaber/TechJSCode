@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js基础3</title>
+</head>
+<body>
+<script>
+    // // 反转数组
+    // var arr1 = [456,4562,23,975,57,22,896];
+    // console.log(arr1);
+    // arr1.reverse();
+    // console.log(arr1);
+
+    // // 传统方法
+    // var arr1 = [1,2,3];
+    // var a = arr1[0];
+    // var b = arr1[1];
+    // var c = arr1[2];
+    // console.log(a,b,c);
+    // // 解构赋值
+    // var arr1 = [4,5,6];
+    // [a,b,c] = arr1;
+    // [e,f] = arr1;
+    // console.log(a,b,c);
+    // console.log(e,f);
+
+    // // 冒泡排序
+    // var arr1 = [125,347,124,22,4674,223,353,11];
+    // // 循环嵌套
+    // // 外层循环控制轮数，i为轮数
+    // for (var i = 1;i<arr1.length;i++) {
+    //     // 内层循环控制比较次数,j为数组索引
+    //     for (var j = 0;j<arr1.length-i;j++) {
+    //         if (arr1[j]>arr1[j+1]) {
+    //             // 冒泡排序两数交换
+    //             var temp = arr1[j];
+    //             arr1[j] = arr1[j+1];
+    //             arr1[j+1] = temp;
+    //         }
+    //     }
+    // }
+    // console.log(arr1);
+
+
+    // // 插入排序
+    // // 假设数组第一个元素是有顺序的数组
+    // var arr1 = [567,35,67,11,68,356,85];
+    // // 外层遍历无序数组下标
+    // for (var i =1;i<arr1.length;i++) {
+    //     // 内层为比较元素
+    //     // 把无序的需要比较的数与假设的有序数组相比较
+    //     for (var j = i;j>0;j--) {
+    //         if (arr1[j]<arr1[j-1]) {
+    //             var temp = arr1[j];
+    //             arr1[j] = arr1[j-1];
+    //             arr1[j-1] = temp;
+    //         }
+    //     }
+    // }
+    // console.log(arr1);
+
+
+    // // js数组排序sort()
+    // var arr = ['white','black','blue','green','purple'];
+    // arr.sort();
+    // console.log(arr);
+
+
+    // // sort()排序默认为排序字符串
+    // var arr = [345,111,46,95,2,9,364,116.757];
+    // console.log(arr);
+    // arr.sort();
+    // console.log(arr);
+
+    // // 利用js里的比值函数来修正数字排序
+    // // function (a,b) {
+    // //     return a-b
+    // // }
+    // var arr = [345,111,46,95,2,9,364,116.757];
+    // arr.sort(function (a,b) {
+    //     return a-b
+    // });
+    // console.log(arr);
+
+    // // 数组拼接concat()
+    // var arr1 = ['计应221','计应222','计应223','计应224','计应225'];
+    // var arr2 = ['计应231','计应232','计应233','计应234'];
+    // var myClass = arr1.concat(arr2);
+    // console.log(myClass);
+    // var arr3 = ['计应211','计应212','计应213'];
+    // var myJSClass = arr1.concat(arr2,arr3);
+    // console.log(myJSClass);
+
+    // 数组裁剪slice()
+    // slice()创建新数组，不会对源数组造成影响
+    var arr = [1,2,3,4,5,6,7,8,9];
+    var arr1 = arr.slice(1);
+    var arr2 = arr.slice(3,6);
+    console.log(arr1);
+    console.log(arr2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

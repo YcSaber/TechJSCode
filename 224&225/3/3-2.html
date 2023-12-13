@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js基础下2</title>
+</head>
+<body>
+<script>
+    // // 将数组转换为字符串
+    // var arr = ['1号公寓','2号公寓','3号公寓','4号公寓','5号公寓','6号公寓'];
+    // console.log(arr);
+    // var str = arr[0];
+    // var sep = '|';
+    // for (var i=1;i<arr.length;i++) {
+    //     str += sep + arr[i];
+    // }
+    // console.log(str);
+    //
+    // // 利用toString()
+    // console.log(arr.toString());
+    // // 利用join()
+    // console.log(arr.join('｜'));
+
+    // // 添加数组长度
+    // var arr = [1,2,3,4,5,6];
+    // console.log(arr);
+    // arr.length = 9;
+    // console.log(arr);
+    // console.log(arr[6]);
+    // arr.length = 3;
+    // console.log(arr);
+
+    // // 修改数组元素
+    // var arr = ['苹果','橘子','葡萄','香蕉'];
+    // console.log(arr);
+    // arr[1] = '梨';
+    // console.log(arr);
+    // // 新增数组元素
+    // arr[4] = '柚子';
+    // console.log(arr);
+    // // push()将元素添加到数组结尾
+    // arr.push('榴莲');
+    // console.log(arr);
+    // // unshift()将元素添加到数组开头
+    // arr.unshift('桃子');
+    // console.log(arr);
+
+
+    // // 筛选数组元素，筛选出大于等于10的
+    // var arr = [1,5,65,235,2,6,23,6,23,8,9,2364,32,5,56,2,62,6,33];
+    // var newArr = [];
+    // for (var i = 0;i<arr.length;i++) {
+    //     if (arr[i]>=10) {
+    //         newArr.push(arr[i]);
+    //     }
+    // }
+    // console.log(newArr);
+
+    // // 筛选数组元素，把数组当中所有值为0的删除
+    // var arr = [235,2,0,345,0,346,0,0,345,346,66,2,0,2,0,0,0,235,66];
+    // console.log(arr);
+    // var newArr = [];
+    // for (var i = 0;i<arr.length;i++) {
+    //     if (arr[i] != 0) {
+    //         newArr.push(arr[i]);
+    //     }
+    // }
+    // console.log(newArr);
+
+    // // 对原数组进行删除操作
+    // // splice()删除数组元素
+    // for (var i = 0;i<arr.length;i++) {
+    //     if (arr[i] == 0) {
+    //         //delete删除数组元素，并变成空元素
+    //         delete arr[i];
+    //         // splice(数组元素位置,删除个数)
+    //         arr.splice(i,1);
+    //     }
+    // }
+    // console.log(arr);
+
+    // // // 使用splice()添加元素
+    // var menu = ['锅包肉','水煮肉片','鱼香肉丝','地三鲜','尖椒干豆腐'];
+    // console.log(menu);
+    // menu.push('蓝莓山药');
+    // menu.unshift('红烧肉');
+    // console.log(menu);
+    // console.log(menu.push('蓝莓山药'));
+    // // splice(添加位置,0,添加元素);
+    // menu.splice(3,0,'糖醋排骨','蒜蓉娃娃菜');
+    // console.log(menu);
+
+
+    // // 使用splice()进行删除添加操作
+    // var menu = ['锅包肉','水煮肉片','鱼香肉丝','地三鲜','尖椒干豆腐'];
+    // console.log(menu);
+    // menu.splice(1,2,'糖醋排骨','东北杀猪菜');
+    // console.log(menu);
+    // console.log(menu.splice(1,2));
+
+    // // 数组元素删除操作
+    // var arr = [1,2,3,4,5,6,7,8];
+    // // pop()删除数组最后的元素
+    // arr.pop();
+    // console.log(arr);
+    // // shift()删除数组开头的元素
+    // arr.shift();
+    // console.log(arr.shift());
+    // console.log(arr);
+
+    // 反转数组
+    var arr = [412,523,8654,22,643,11,654,33];
+    console.log(arr);
+    var newArr = [];
+    for (var i=0;i<arr.length;i++) {
+        newArr.unshift(arr[i]);
+    }
+    console.log(newArr);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

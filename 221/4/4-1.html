@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js函数1</title>
+</head>
+<body>
+<script>
+    // // 声明函数
+    // function sayHello() {
+    //     alert('Hello 221');
+    // }
+    // // 调用函数
+    // sayHello();
+
+    // 没用函数时的操作
+    var arr1 = [1,2,3,4,5,6,7,8,9];
+    var arr2 = [634,125,2,23,5,23];
+    var arr3 = [124,235,6432,23];
+    var arr4 = [5,463,21,1];
+    var arr5 = [32,64,64,32,21,1,1];
+    // var sum1 = 0;
+    // var sum2 = 0;
+    // for (var i=0;i<arr1.length;i++) {
+    //     sum1 += arr1[i];
+    // }
+    // for (var j=0;j<arr2.length;j++) {
+    //     sum2 += arr2[j];
+    // }
+    // console.log(sum1,sum2);
+
+    // 使用函数,声明一个getSum函数
+    // 通过函数求数组元素的和
+    function getSum(arr) {
+        var sum = 0;
+        for (var i=0;i<arr.length;i++) {
+            sum += arr[i];
+        }
+        console.log(sum);
+    }
+    // 调用getSum()函数
+    getSum(arr1);
+    getSum(arr2);
+    getSum(arr3);
+    getSum(arr4);
+    getSum(arr5);
+
+
+</script>
+</body>
+</html>

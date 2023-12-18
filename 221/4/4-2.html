@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js函数2</title>
+</head>
+<body>
+<div id="demo"></div>
+<script>
+    // // 作业2（1）
+    // var arr = [1,2,3,4,2,5,6,2,7,2];
+    // var newArr = [];
+    // for (var i=0;i<arr.length;i++) {
+    //     if (arr[i]!=2) {
+    //         newArr.push(arr[i]);
+    //     }
+    // }
+    // console.log(arr);
+    // console.log(newArr);
+
+    // // 作业2（2）
+    // var arr = ['🍎','🍌','酥梨','榴莲','🍇','🍒','柿子','🍈','🍉'];
+    // for (var i=0;i<arr.length;i++) {
+    //     console.log(arr[i]);
+    // }
+
+
+    // // 函数的形参与实参
+    // function getSum(num1,num2) {
+    //     console.log(num1+num2);
+    // }
+    // getSum(4,9);
+    // getSum(10000,20000);
+
+    // // 函数参数数量问题
+    // function getNum(num1,num2) {
+    //     console.log(num1,num2);
+    // }
+    // getNum(1,5);
+    // getNum(1,5,9);
+    // getNum(1);
+
+
+
+    // // 函数的返回值
+    // function getResult() {
+    //     return 666;
+    // }
+    // // console.log(getResult());
+    // // document.getElementById('demo').innerHTML = getResult();
+    // var result = getResult();
+    // result += 222;
+    // document.getElementById('demo').innerHTML = result;
+
+    // // 使用函数返回任意两个数的最大值
+    // function getMax(num1,num2) {
+    //     if (num1>num2) {
+    //         return num1;
+    //     } else {
+    //         return num2;
+    //     }
+    // }
+    // var max = getMax(543,77.8);
+    // document.getElementById('demo').innerHTML = max;
+
+
+
+    // // 使用函数求数组元素中的最小值
+    // function getMin(arr) {
+    //     var min = arr[0];
+    //     for (var i=0;i<arr.length;i++) {
+    //         if (min>arr[i]) {
+    //             min = arr[i];
+    //         }
+    //     }
+    //     return min;
+    // }
+    // var arr1 = [4,5,26,45,58,325,8,1,23,845,8];
+    // document.getElementById('demo').innerHTML = getMin(arr1);
+
+    // // 函数中return之后的代码不会执行
+    // // 使用return提前终止函数
+    // // 返回两个数的最大值
+    // function getMax(num1,num2) {
+    //     if (isNaN(num1) || isNaN(num2)) {
+    //         return '请输入正确的数字';
+    //     }
+    //     return num1>num2?num1:num2;
+    // }
+    // var num1 = parseFloat(prompt("请输入数字1"));
+    // var num2 = parseFloat(prompt('请输入数字2'));
+    // console.log(typeof num1);
+    // console.log(num1);
+    // var result = getMax(num1,num2);
+    // document.getElementById('demo').innerHTML = result;
+
+    // // return返回多个值
+    // function f(num1,num2) {
+    //     // return num1,num2;
+    //     return [num1+num2,num1-num2,num1*num2,num1/num2];
+    // }
+    // console.log(f(1,2));
+    // document.getElementById('demo').innerHTML = f(1,2);
+
+
+    // // 获取任意数量数字中的最大值
+    // function getMax() {
+    //     // console.log(arguments);
+    //     // console.log(arguments[0]);
+    //     // console.log(arguments.length);
+    //     var max = arguments[0];
+    //     for (var i=1;i<arguments.length;i++) {
+    //         if (max<arguments[i]) {
+    //             max = arguments[i];
+    //         }
+    //     }
+    //     return max;
+    // }
+    // var max = getMax(1,5,23,6,7345,743,234,7);
+    // document.getElementById('demo').innerHTML = max;
+
+
+    // 利用函数反转数组顺序
+    function reverse(arr) {
+        var newArr = [];
+        for (var i=0;i<arr.length;i++) {
+            newArr.unshift(arr[i]);
+        }
+        return newArr;
+    }
+    var arr1 = [1,2,3,4,5,6,7];
+    document.getElementById('demo').innerHTML = reverse(arr1);
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

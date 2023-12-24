@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js函数2</title>
+</head>
+<body>
+<div id="demo"></div>
+<script>
+    // // 作业2（1）
+    // var arr = [1,2,3,4,2,5,6,2,7,2];
+    // var arrNew = [];
+    // for (var i=0;i<arr.length;i++) {
+    //     if (arr[i]!=2) {
+    //         arrNew.push(arr[i]);
+    //     }
+    // }
+    // console.log(arr);
+    // console.log(arrNew);
+    // // 作业2（2）
+    // var arr = ['苹果','香蕉','酥梨','榴莲','樱桃','柿子','🍇','哈密瓜','🍉'];
+    // for (var i=0;i<arr.length;i++) {
+    //     console.log(arr[i]);
+    // }
+
+
+
+    // // 函数参数的数量
+    // function getNum(num1,num2) {
+    //     console.log(num1,num2);
+    // }
+    // getNum(1,2);
+    // getNum(1,2,3,4);
+    // getNum(1);
+
+    // 函数的返回值
+    // function getNum() {
+    //     return 888;
+    // }
+    // document.getElementById('demo').innerHTML = getNum();
+
+    // 函数返回值案例
+    // // 利用函数求两个数的最大值
+    // function getMax(num1,num2) {
+    //     if (num1>num2) {
+    //         return num1;
+    //     } else {
+    //         return num2;
+    //     }
+    // }
+    // // console.log(getMax(5,9));
+    // document.getElementById('demo').innerHTML = getMax(777.7,234);
+
+    // // 利用函数求数组当中的最小值
+    // function getMin(arr) {
+    //     var min = arr[0];
+    //     for (var i=1;i<arr.length;i++) {
+    //         if (arr[i]<min) {
+    //             min = arr[i];
+    //         }
+    //     }
+    //     return min;
+    // }
+    // var arr1 = [5,57,2,34,7,9,2,4,2,543753,132,5,2];
+    // document.getElementById('demo').innerHTML = getMin(arr1);
+
+
+    // // 利用return提前终止函数
+    // // 判断函数两个数字是否为数字型，不是则终止
+    // function getMax(num1,num2) {
+    //     if (typeof num1 != 'number' || typeof num2 != 'number') {
+    //         return '请输入正确数字';
+    //     }
+    //     return num1>num2?num1:num2;
+    // }
+    // document.getElementById('demo').innerHTML = getMax('fuanq',8);
+
+    // return返回多个值
+    // function f(num1,num2) {
+    //     return num1,num2;
+    // }
+    // document.getElementById('demo').innerHTML = f(1,2);
+
+    // function getResult(num1,num2) {
+    //     var a = num1+num2;
+    //     var b = num1-num2;
+    //     var c = num1*num2;
+    //     var d = num1/num2;
+    //     return [a,b,c,d];
+    // }
+    // document.getElementById('demo').innerHTML = getResult(9,3);
+
+    // // arguments使用
+    // function fn() {
+    //     console.log(arguments);
+    //     console.log(arguments.length);
+    //     console.log(arguments[0],arguments[1]);
+    // }
+    // fn(1,2,3,4,5);
+
+
+    // // 使用函数获取最大值
+    // function getMax() {
+    //     var max = arguments[0];
+    //     for (var i=0;i<arguments.length;i++) {
+    //         if (arguments[i]>max) {
+    //             max = arguments[i];
+    //         }
+    //     }
+    //     return max;
+    // }
+    // document.getElementById('demo').innerHTML = getMax(1,5,32,7,43,8,9,5,456,2);
+
+    // // 利用函数实现反转数组
+    // function reverse(arr) {
+    //     var newArr = [];
+    //     for (var i=0;i<arr.length;i++) {
+    //         newArr.unshift(arr[i]);
+    //     }
+    //     return newArr;
+    // }
+    // var arr = [1,2,3,4,5,6,7,8];
+    // document.getElementById('demo').innerHTML = reverse(arr);
+
+    // 利用函数判断是否为闰年
+    function isLeapYear(year) {
+        if (year%4==0 && year%100!=0 || year%400==0) {
+            return year+'是闰年';
+        } else {
+            return year+'不是闰年';
+        }
+    }
+    document.getElementById('demo').innerHTML = isLeapYear(2024);
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js函数3</title>
+</head>
+<body>
+<div id="demo"></div>
+<script>
+    // // 利用函数判断是否为闰年
+    // function isLeapYear(year) {
+    //     var flag = false;
+    //     if (year%4 == 0 && year % 100 != 0|| year % 400 == 0) {
+    //         flag = true;
+    //     }
+    //     return flag;
+    // }
+    // // var year = prompt('请输入年份');
+    // // var result = isLeapYear(year)?year+'是闰年':year+'不是闰年';
+    // // document.getElementById('demo').innerHTML = result;
+    //
+    //
+    //
+    // // 获取指定年份2月天数
+    // function getFebDays() {
+    //     var year = prompt('请输入年份');
+    //     if (isLeapYear(year)) {
+    //         return 29;
+    //     } else {
+    //         return 28;
+    //     }
+    // }
+    // var day = getFebDays();
+    // var result = '当前年份二月共有'+day+'天';
+    // document.getElementById('demo').innerHTML = result;
+    
+
+
+    // // 函数声明
+    // function getSum(num1,num2) {
+    //     return num1+num2;
+    // }
+
+
+    // // 函数表达式
+    // var getSum = function (num1,num2) {
+    //     return num1+num2;
+    // }
+    // document.getElementById('demo').innerHTML = getSum(1,2);
+
+
+    // // 回调函数
+    // function f(num1,num2,fn) {
+    //     return fn(num1,num2);
+    // }
+    // console.log(f(1,2,function (num1,num2) {
+    //     return num1+num2;
+    // }));
+
+    // // 递归调用
+    // function factorial(num1) {
+    //     if (num1 ==1) {
+    //         return 1;
+    //     }
+    //     return num1 * factorial(num1-1);
+    // }
+    // var n = parseInt(prompt('求N的阶乘 \n N为大于1的数'));
+    // if (isNaN(n)) {
+    //     document.getElementById('demo').innerHTML = '请输入合法数据';
+    // } else {
+    //     document.getElementById('demo').innerHTML = factorial(n);
+    // }
+
+    // // 作用域
+    // // 全局作用域
+    // var age = 20;
+    // function f() {
+    //     age = 19;
+    //     console.log(age);
+    //     // 局部作用域
+    //     var age = 18;
+    //     age = 22;
+    //     console.log(age);
+    // }
+    // console.log(age);
+    // f();
+    // console.log(age);
+
+    // 作用域链
+    var num = 10;
+    function f() {
+        var num = 20;
+        function f1() {
+            console.log(num);
+        }
+        f1()
+    }
+    f()
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js对象3</title>
+</head>
+<body>
+<script>
+    // var str = 'hello world!';
+    // console.log(str.indexOf('l'));
+    // console.log(str.lastIndexOf('l'));
+
+
+
+
+    // // 在字符串中找到所有制定元素出现的位置以及次数
+    // var str = 'Hello World!Hello JavaScript';
+    // var index = str.indexOf('o');
+    // var num = 0;
+    // while (index!=-1) {
+    //     console.log(index);
+    //     index = str.indexOf('o',index+1);
+    //     num++;
+    // }
+    // console.log('o的出现次数为'+num);
+
+
+
+    // // 统计字符串中出现最多的字符和次数
+    // var str = 'Hello World!Hello JavaScript!';
+    // // 统计每个字符出现次数
+    // var count = {};
+    // for (var i=0;i<str.length;i++) {
+    //     var chars = str[i];
+    //     if (count[chars]) {
+    //         count[chars]++;
+    //     }else {
+    //         count[chars] = 1;
+    //     }
+    // }
+    // console.log(count);
+    // // 统计出现最多的字符和次数
+    // var max = 0;
+    // var ch = '';
+    // for (var k in count) {
+    //     if (count[k] > max) {
+    //         max = count[k];
+    //         ch = k;
+    //     }
+    // }
+    // console.log(ch,max);
+
+
+
+    // var str = 'JavaScript';
+    // console.log(str.substring(3,7));
+    // console.log(str.substr(3,6))
+
+
+    // // 判断用户名是否合法
+    // var name = prompt('请输入用户名');
+    // if (name.length<3 || name.length>10) {
+    //     alert('用户名长度必须在3-10之间');
+    // }else if (name.toUpperCase().indexOf('ADMIN')!==-1) {
+    //     alert('用户名不能包含敏感词admin');
+    // }else {
+    //     alert('恭喜您，该用户名可以使用');
+    // }
+
+    // let 块作用域
+    // // {
+    // //     let x=10;
+    // // }
+    // // console.log(x);
+    // // var y = 10;
+    // // {
+    // //     let y = 5;
+    // // }
+    // // console.log(y);
+
+    // // 再循环中使用let
+    // // var i = 5;
+    // // for (var i=0;i<10;i++){
+    // //     var a = 0;
+    // // }
+    // // console.log(i);
+    // let i = 5;
+    // for (let i=0;i<10;i++){
+    //     let a = 0;
+    // }
+    // console.log(i);
+
+    // var x = 10;
+    // var x = 20;
+    // console.log(x);
+    // let y = 30;
+    // let y = 40; //不允许
+    // console.log(y);
+
+    // console.log(str1);
+    // var str1;
+    // console.log(str2);
+    // let str2;
+
+    // const 块级作用域但不能重新赋值
+    // const PI = 3.141592653589793;
+    // PI = 3.14;  //报错
+    // PI= PI+10;
+    // const必须先赋值
+    // const PI;
+    // PI = 3.14;//报错
+
+
+
+
+    // // const对象创建
+    // const car = {
+    //     type:'porsche',
+    //     model:'911',
+    //     color:'black'
+    // };
+    // // 可以修改属性
+    // car.color = 'white';
+    // console.log(car.color);
+    // // 可以添加属性
+    // car.owner = 'A';
+    // console.log(car);
+    // // 不能重新赋值
+    // car = {type:'audi'};
+
+    // const数组创建
+    const cars = ['Benz','BMW','Audi'];
+    // 可以修改和增加数组元素
+    cars[0] = 'Honda';
+    cars.push('porsche');
+    console.log(cars);
+    // 不能重新赋值
+    cars = ['Honda','Volvo'];
+
+
+</script>
+</body>
+</html>

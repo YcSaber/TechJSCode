@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js对象3</title>
+</head>
+<body>
+<script>
+    // var str1 = 'hello';
+    // console.log(str1.indexOf('a'));
+
+
+
+    // var str = 'Hello World.Hello JavaScript!';
+    // var index = str.indexOf('o');
+    // var num = 0;
+    // while (index!=-1) {
+    //     console.log(index);
+    //     num++;
+    //     index = str.indexOf('o',index+1);
+    // }
+    // console.log('o的出现次数为'+num);
+
+
+    // // 统计字符串中出现最多的字符和次数
+    // var str = 'Hello World!Hello JavaScript!';
+    // // 统计出现次数
+    // var count = {};
+    // // 遍历字符串统计次数
+    // for (var i=0;i<str.length;i++) {
+    //     var chars = str[i];
+    //     if (count[chars]) {
+    //         count[chars]++;
+    //     }else {
+    //         count[chars] = 1;
+    //     }
+    // }
+    // console.log(count);
+    // // 统计出现次数最多的字符跟次数
+    // var max = 0;
+    // var ch = '';
+    // // 遍历count对象找到具体值
+    // for (k in count) {
+    //     if (count[k]>max) {
+    //         max = count[k];
+    //         ch = k;
+    //     }
+    // }
+    // console.log(ch,max);
+
+
+    // var str = 'JavaScript!';
+    // console.log(str.substring(3,7));
+    // console.log(str.substr(3,7));
+
+
+
+    // // 判断用户名是否合法，长度3-10，不能出现敏感词admin
+    // var name = prompt('请输入用户名');
+    // if (name.length<3 || name.length>10) {
+    //     alert('用户名长度必须在3-10之间！');
+    // } else if (name.toLowerCase().indexOf('admin')!=-1) {
+    //     alert('不能包含敏感词admin');
+    // } else {
+    //     alert('恭喜您！用户名可用！');
+    // }
+
+    // let const
+    // {
+    //     var x = 10;
+    // }
+    // console.log(x);
+    // {
+    //     let y = 20; //块级作用域，外面无法访问
+    // }
+    // console.log(y);
+
+    // let x = 10;
+    // {
+    //     let x = 5;
+    // }
+    // console.log(x);
+
+    // var i = 5;
+    // for (var i=0;i<10;i++) {
+    //     var a = 9;
+    // }
+    // console.log(i);
+
+    // let i = 5;
+    // for (let i=0;i<10;i++) {
+    //     var a = 9;
+    // }
+    // console.log(i);
+
+    // var a = 1;
+    // var a = 2;
+    // console.log(a);
+    // // 不允许重新声明
+    // let b = 1;
+    // let b = 2;
+    // console.log(b);
+
+
+    // console.log(str1);
+    // var str1 = 'a';
+    // console.log(str2);
+    // let str2 = 'b'; //不允许变量提升
+
+
+
+
+    // // const不能重新赋值
+    // const PI = 3.14159265;
+    // PI = 3.14;
+    // PI = PI +10;
+
+
+    // const只能在声明时赋值
+    // const PI;
+    // PI = 3.14;
+
+
+
+    // // const对象可以进行属性的更改以及增加
+    // const car = {
+    //     type:'Benz',
+    //     color:'black'
+    // };
+    // car.type = 'Audi';
+    // console.log(car.type);
+    // car.model = 'A8';
+    // console.log(car.model);
+    // // const对象不能重新赋值
+    // car = {type:'Volvo'};
+
+    // // const可以创建数组以及进行数组更改元素添加元素
+    // const car = ['Benz','BMW','Audi'];
+    // car[0] = 'Toyota';
+    // car.push('Honda');
+    // console.log(car);
+    // // const无法重新为数组赋值
+    // car = ['poorsche','Volvo'];
+
+
+
+
+
+
+</script>
+</body>
+</html>

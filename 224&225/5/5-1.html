@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js对象1</title>
+</head>
+<body>
+<script>
+    // var person = {
+    //     firstName:'Joe',
+    //     lastName:'Biden',
+    //     gender:'男',
+    //     supportY:function () {
+    //         console.log('支持以');
+    //     },
+    //     sanctionC:function () {
+    //         console.log('制裁中国');
+    //     }
+    // };
+    // // 访问属性
+    // console.log(person.firstName);
+    // console.log(person.lastName);
+    // // 访问方法
+    // person.supportY();
+    // person.sanctionC();
+
+
+
+    // // 使用字面量创建对象
+    // // 创建一个空对象
+    // var obj = {};
+    // // 创建一个学生对象
+    // var stu1 = {
+    //     name:'许亮',
+    //     gender:'男',
+    //     age:18,
+    //     'school-class':'牡丹江大学-计应224',
+    //     toStudy:function (name) {
+    //         console.log('去上'+name+'课了');
+    //     },
+    //     toWork:function () {
+    //         console.log('去赚生活费');
+    //     }
+    // };
+    // // 访问对象的属性
+    // console.log(stu1.name);
+    // console.log(stu1['age']);
+    // console.log(stu1["school-class"]);
+    // // 调用对象的方法
+    // stu1.toWork();
+    // stu1['toStudy']('JS');
+    //
+    // var str2 = {};
+    // // 手动赋值添加属性以及方法
+    // str2.name = '吴俊';
+    // str2.age = 18;
+    // str2.sayHello = function () {
+    //     console.log('hello! I am '+this.name);
+    // };
+    // console.log(str2);
+    // console.log(str2.name);
+    // str2.sayHello();
+    //
+    // console.log(str2.gender);
+
+
+
+    // // 使用new Object创建对象
+    // var person2 = new Object();
+    // person2.name = '赵四';
+    // person2.age = 50;
+    // person2.sex = '男';
+    // person2.sayHello = function () {
+    //     console.log('hello');
+    // }
+    // console.log(person2.name);
+    // person2.sayHello();
+
+
+
+    // // 利用构造函数创建对象
+    // // 编写构造函数
+    // function Student(name,age) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.school = '牡丹江大学';
+    //     this.toStudy = function () {
+    //         console.log(this.name+'去上课了');
+    //     }
+    // }
+    // // 使用构造函数创建对象
+    // var stu1 = new Student('学生1',18);
+    // var stu2 = new Student('学生2',19);
+    // console.log(stu1.name);
+    // console.log(stu1.age);
+    // console.log(stu2.name);
+    // console.log(stu2.school);
+    // stu2.toStudy();
+    // // 为构造函数添加静态成员
+    // Student.city = '牡丹江';
+    // Student.sayHello = function () {
+    //     console.log('hello');
+    // };
+    // console.log(Student.city);
+    // console.log(stu1.city);
+
+    // // js对象是易变的，通过引用来寻址，而不是值
+    // var stu1 = {
+    //     name:'张三',
+    //     age:20,
+    //     gender:'男'
+    // };
+    // var x = stu1;   //x不是stu1的副本，它就是stu1
+    // x.age = 30;
+    // console.log(x.age);
+    // console.log(stu1.age);
+
+
+    // 使用for...in语法遍历对象中的属性以及方法
+    var phone1 = {
+        color:'黑色',
+        price:8999,
+        model:'mate60',
+        call:function () {
+            console.log('打电话');
+        }
+    }
+    // 遍历对象
+    for (var x in phone1) {
+        // 通过x可以获取对象的属性名以及方法名
+        console.log(x);
+        console.log(phone1[x]);
+    }
+    console.log('color' in phone1);
+    console.log('brand' in phone1);
+
+
+
+</script>
+</body>
+</html>

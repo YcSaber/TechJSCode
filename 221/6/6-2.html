@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM2</title>
+    <style>
+        #hello{
+            width: 100px;
+            height: 100px;
+            background: chartreuse;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<!--<div class="box">box1</div>-->
+<!--<div class="box">box2</div>-->
+<!--<div id="nav">-->
+    <!--<ul id="list">-->
+        <!--<li>首页</li>-->
+        <!--<li>产品</li>-->
+        <!--<li>分类</li>-->
+        <!--<li>直播</li>-->
+        <!--<li>个人中心</li>-->
+    <!--</ul>-->
+<!--</div>-->
+<!--<div id="container">-->
+    <!--<div></div>-->
+    <!--<div></div>-->
+<!--</div>-->
+<div id="hello">hello!</div>
+<script>
+    // // 获取class值为box的第一个元素
+    // let firstBox = document.querySelector('.box');
+    // console.log(firstBox);
+    // // 获取id为nav的第一个元素
+    // let nav = document.querySelector('#nav');
+    // console.log(nav);
+    // // 获取标签为li的第一个元素
+    // let li1 = document.querySelector('li');
+    // console.log(li1);
+    // // 获取所有class为box的元素
+    // let allBox = document.querySelectorAll('.box');
+    // console.log(allBox);
+    // // 获取所有标签为li的元素
+    // let allLi = document.querySelectorAll('li');
+    // console.log(allLi);
+
+
+
+    // NodeList非实时，HTMLCollection实时
+
+    // // 选取页面id为coontainer的元素
+    // let container = document.getElementById('container');
+    // console.log(container.children.length);
+    // // 通过代码添加子元素
+    // container.appendChild(document.createElement('div'));
+    // // 变量container自动更新
+    // console.log(container.children.length);
+
+    // // 通过id获取ul
+    // let oUl = document.getElementById('list');
+    // // 通过querySelectorall获取li元素，返回类数组
+    // let aLi = document.querySelectorAll('#list li');
+    // // 初次获取元素的列表长度
+    // let startlen = aLi.length;
+    // console.log(startlen);
+    // // 创建Li节点
+    // let nLi = document.createElement('li');
+    // // 创建文本节点
+    // let textNode = document.createTextNode('LI元素');
+    // // 把文本节点添加到li中
+    // nLi.appendChild(textNode);
+    // // 将li插入
+    // oUl.appendChild(nLi);
+    // // 动态添加后，再次获取元素长度
+    // let endLen = aLi.length;
+    // console.log(endLen);
+
+
+
+
+
+    // let bodyEle = document.body;
+    // console.log(bodyEle);
+    // let titleEle = document.title;
+    // console.log(titleEle);
+    // let htmlEle = document.documentElement;
+    // console.log(htmlEle);
+
+
+    // 事件三要素
+    // 第一步，获取事件源
+    var btn1 = document.getElementById('hello');
+    // 第二步，注册点击事件onclick
+    btn1.onclick = function () {
+        // 第三步，添加事件处理程序
+        alert('你好！');
+    }
+
+</script>
+</body>
+</html>

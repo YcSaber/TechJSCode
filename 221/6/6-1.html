@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM1</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<ul>
+    <li>🥬</li>
+    <li>🍅</li>
+    <li>🥔</li>
+    <li>🍆</li>
+</ul>
+<ol id="ol1">
+    <li>🍎</li>
+    <li>🍑</li>
+    <li>🥝</li>
+    <li>🍇</li>
+</ol>
+<p>请选择你的爱好（多选）</p>
+<label><input type="checkbox" name="hobby" value="唱">唱</label>
+<label><input type="checkbox" name="hobby" value="跳">跳</label>
+<label><input type="checkbox" name="hobby" value="rap">rap</label>
+<label><input type="checkbox" name="hobby" value="篮球">篮球</label>
+
+
+<div>
+    <span class="one">英语</span>
+    <span class="two">体育</span>
+    <span class="one">语文</span>
+    <span class="two">C语言</span>
+</div>
+
+<script>
+    // let Obox = document.getElementById('demo');
+    // console.log(Obox);
+    // console.log(typeof Obox);
+    // console.dir(Obox);
+    // // document.getElementById('demo').innerHTML = 'Hello World';
+
+
+    // let lis = document.getElementsByTagName('li');
+    // console.log(lis);
+    // // 查看索引为1的元素
+    // console.log(lis[1]);
+    // // 遍历所有元素
+    // for (let i=0;i<lis.length;i++) {
+    //     console.log(lis[i]);
+    // }
+    // let ol1 = document.getElementById('ol1');
+    // console.log(ol1);
+    // let lis1 = ol1.getElementsByTagName('li');
+    // console.log(lis1);
+
+    // 返回对象集合
+    let hobby = document.getElementsByName('hobby');
+    console.log(hobby);
+    // 将hobby中第一个第三个元素checked属性设置为true
+    hobby[0].checked = true;
+    hobby[2].checked = true;
+
+    let Ospan1 = document.getElementsByClassName('one');
+    let Ospan2 = document.getElementsByClassName('two');
+    console.log(Ospan1);
+    console.log(Ospan2);
+    Ospan1[0].style.fontWeight = 'bold';
+    Ospan2[1].style.background = 'red';
+</script>
+</body>
+</html>

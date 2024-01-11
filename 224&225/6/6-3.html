@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom3</title>
+    <style>
+        #eye{
+            height: 22px;
+            width: 48px;
+        }
+        .first{
+            width: 200px;
+            height: 200px;
+            background-color: #42e115;
+        }
+        .change{
+            width: 260px;
+            height: 260px;
+            color: #fff;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+<!--<div id="box">-->
+    <!--这是div里的内容-->
+    <!--<p>-->
+        <!--这是p标签里的内容-->
+        <!--<a href="#">这是a标签</a>-->
+    <!--</p>-->
+<!--</div>-->
+
+<!--<button id="flower">鲜花</button>-->
+<!--<button id="grass">四叶草</button>-->
+<!--<img class="img1" src="images/grass.png" alt="" title="四叶草">-->
+
+
+<!--<div class="box">-->
+    <!--<input type="password" id="pwd">-->
+    <!--<label for="">-->
+        <!--<img src="images/close.png" alt="" id="eye">-->
+    <!--</label>-->
+<!--</div>-->
+
+
+<!--<div id="box"></div>-->
+
+<div class="first">文本1</div>
+<script>
+    // let oBox = document.getElementById('box');
+    // console.log(oBox.innerHTML);
+    // console.log(oBox.innerText);
+    // console.log(oBox.textContent);
+
+    // // 1。获取元素
+    // let flower = document.getElementById('flower');
+    // let grass = document.getElementById('grass');
+    // let img1 = document.querySelector('.img1');
+    // // 2.注册事件处理程序
+    // flower.onclick = function () {
+    //     // 3.修改元素属性
+    //     img1.src = 'images/flower.png';
+    //     img1.title = '鲜花';
+    // };
+    // grass.onclick = function () {
+    //     // 3.修改元素属性
+    //     img1.src = 'images/grass.png';
+    //     img1.title = '四叶草';
+    // };
+
+    // // 1.获取元素
+    // let pwd = document.getElementById('pwd');
+    // let eye = document.getElementById('eye');
+    // // 2.注册事件处理层序
+    // let flag = 0;
+    // eye.onclick = function () {
+    //     // 每次单击先检测flag的值，然后对应操作，修改flag
+    //     if (flag === 0) {
+    //         eye.src = 'images/open.png';
+    //         pwd.type = 'text';
+    //         flag = 1;
+    //     } else {
+    //         eye.src = 'images/close.png';
+    //         pwd.type = 'password';
+    //         flag = 0;
+    //     }
+    // }
+
+    // // 操作style属性修改样式
+    // let oBox = document.getElementById('box');
+    // oBox.style.width = '500px';
+    // oBox.style.height = '500px';
+    // oBox.style.backgroundColor = '#41fa95';
+    // oBox.style.transform = 'rotate(7deg)';
+
+
+    // 操作className修改样式
+    let first = document.querySelector('.first');
+    first.onclick = function () {
+        this.className = 'first change';
+    }
+
+
+</script>
+</body>
+</html>

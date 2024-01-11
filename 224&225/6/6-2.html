@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM2</title>
+    <style>
+        #hello{
+            width: 100px;
+            height: 80px;
+            background: #42e115;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<!--<div class="box">box1</div>-->
+<!--<div class="box">box2</div>-->
+<!--<div id="nav">-->
+    <!--<ul id="list">-->
+        <!--<li>首页</li>-->
+        <!--<li>直播</li>-->
+        <!--<li>分类</li>-->
+        <!--<li>产品</li>-->
+        <!--<li>我的</li>-->
+    <!--</ul>-->
+<!--</div>-->
+<!--<div id="container">-->
+    <!--<div></div>-->
+    <!--<div></div>-->
+<!--</div>-->
+<div id="hello">hello!</div>
+<script>
+    // // 获取class为box的第一个元素
+    // let firstBox = document.querySelector('.box');
+    // console.log(firstBox);
+    // // 获取id为nav的第一个元素
+    // let firstNav = document.querySelector('#nav');
+    // console.log(firstNav);
+    // // 获取标签为li的第一个元素
+    // let firstLi = document.querySelector('li');
+    // console.log(firstLi);
+    // // 获取class为box的所有元素
+    // let allBox = document.querySelectorAll('.box');
+    // console.log(allBox);
+    // // 获取标签为li的所有元素
+    // let allLi = document.querySelectorAll('li');
+    // console.log(allLi);
+    // console.log(allLi[1]);
+
+
+    
+    // // NodeList和HTMLCollection区别
+    // // HTMLCollection随着dom改变进行动态变化
+    // // NodeList并不会即时更新元素集合的值
+    //
+    // // 获取id为container的元素
+    // let container = document.getElementById('container');
+    // // 输出该元素的子节点数量
+    // console.log(container.children.length);
+    // // 通过代码为其添加一个div子元素
+    // container.appendChild(document.createElement('div'));
+    // // 元素添加到页面，container进行了实时自动更新
+    // console.log(container.children.length);
+    //
+    // // 通过ID获取ul元素
+    // let oUl = document.getElementById('list');
+    // // querySelectorAll获取松油li元素，返回NodeList类数组
+    // let aLi = document.querySelectorAll('#list li');
+    // console.log(aLi);
+    // // 初次获取元素列表长度
+    // let startLen = aLi.length;
+    // console.log(startLen);
+    //
+    // // 创建li元素节点
+    // let nLi = document.createElement('li');
+    // // 创建文本节点
+    // let textNode = document.createTextNode('新的li元素');
+    // // 将文本节点插入到li节点中
+    // nLi.appendChild(textNode);
+    // // 将组合后的li元素插入到ul子元素的末尾
+    // oUl.appendChild(nLi);
+    // // 动态添加后，再次获取元素列表长度
+    // let endLen = aLi.length;
+    // console.log(endLen);
+
+
+    // let bodyEle = document.body;
+    // console.log(bodyEle);
+    // let titleEle = document.title;
+    // console.log(titleEle);
+    // let htmlEle = document.documentElement;
+    // console.log(htmlEle);
+
+
+    // 第一步：获取事件源
+    let btn1 = document.getElementById('hello');
+    // 第二步：注册事件onclick
+    btn1.onclick = function () {
+        // 第三步：添加事件处理程序
+        alert('你好！');
+    }
+
+
+
+
+</script>
+</body>
+</html>

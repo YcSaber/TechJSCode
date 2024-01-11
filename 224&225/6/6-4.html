@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom上4</title>
+</head>
+<body>
+<input type="text" value="笔记本电脑" style="color: #999">
+
+<script>
+    // 1.获取元素
+    let text = document.querySelector('input');
+    // 2.绑定事件
+    text.onfocus = function () {
+        // 获取焦点事件
+        if (this.value === '笔记本电脑') {
+            this.value = '';
+        }
+        this.style.color = '#000';
+    };
+    text.onblur = function () {
+        // 失去焦点事件
+        if (this.value === '') {
+            this.value = '笔记本电脑';
+        }
+        this.style.color = '#999';
+    };
+
+
+</script>
+</body>
+</html>

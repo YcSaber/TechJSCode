@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="demo"></p>
+<ul>
+    <li>白色</li>
+    <li>黑色</li>
+    <li>蓝色</li>
+    <li>红色</li>
+</ul>
+<ol id="ol">
+    <li>🍎</li>
+    <li>🍌</li>
+    <li>🥝</li>
+    <li>🍑</li>
+</ol>
+
+
+<p>请选择您的爱好（多选）</p>
+<label><input type="checkbox" name="hobby" value="唱">唱</label>
+<label><input type="checkbox" name="hobby" value="跳">跳</label>
+<label><input type="checkbox" name="hobby" value="rap">rap</label>
+<label><input type="checkbox" name="hobby" value="篮球">篮球</label>
+
+<span class="one">C语言</span>
+<span class="two">体育</span>
+<span class="one">JavaScript</span>
+<span class="two">英语</span>
+<script>
+    // var Obox = document.getElementById('demo');
+    // console.log(Obox);
+    // let lis = document.getElementsByTagName('li');
+    // console.log(lis);
+    // console.log(lis[0]);
+    // for (let i=0;i<lis.length;i++) {
+    //     console.log(lis[i]);
+    // }
+    // let ol = document.getElementById('ol');
+    // console.log(ol);
+    // console.log(ol.getElementsByTagName('li'));
+
+
+    let hobbys = document.getElementsByName('hobby');// 返回对象集合
+    console.log(hobbys);
+    hobbys[0].checked = true;
+    hobbys[1].checked = true;
+
+
+    let Ospan1 = document.getElementsByClassName('one');
+    let Ospan2 = document.getElementsByClassName('two');
+    console.log(Ospan1);
+    console.log(Ospan2);
+    Ospan1[0].style.fontWeight = 'bold';
+    Ospan2[1].style.background = 'yellow';
+
+
+</script>
+</body>
+</html>

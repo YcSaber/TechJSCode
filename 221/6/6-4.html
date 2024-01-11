@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom4</title>
+</head>
+<body>
+<input type="text" value="网络机顶盒" style="color: #999;">
+
+
+<script>
+    // 1.获取元素
+    let text = document.querySelector('input');
+    // 2.绑定事件
+    text.onfocus = function () {
+        // 获取焦点事件
+        // 如果内容为默认值清空
+        if (this.value === '网络机顶盒') {
+            this.value = '';
+        }
+        this.style.color = '#333';
+
+    };
+    text.onblur = function () {
+        // 失去焦点事件
+        // 如果输入框内容为空则还原为默认值
+        if (this.value === '') {
+            this.value = '网络机顶盒';
+        }
+        this.style.color = '#999';
+    }
+    
+    
+    
+    
+</script>
+</body>
+</html>

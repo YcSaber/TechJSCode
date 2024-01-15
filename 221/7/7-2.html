@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作业11.20</title>
+
+</head>
+<body>
+<button>问好</button>
+<div></div>
+<script>
+    // 利用内置函数获取当前时间
+    let h = new Date().getHours();
+    // 1.获取元素
+    let div1 = document.querySelector('div');
+    let btn = document.querySelector('button');
+    // 改为点击按钮输出问候语
+    // 2。绑定事件并输入事件代码
+    btn.onclick = function () {
+        if (h<6) {
+            div1.innerHTML = '凌晨好';
+        } else if (h<9) {
+            div1.innerHTML = '早上好';
+        } else if (h<12) {
+            div1.innerHTML = '上午好';
+        } else if (h<14) {
+            div1.innerHTML = '中午好';
+        } else if (h<17) {
+            div1.innerHTML = '下午好';
+        } else if (h<19) {
+            div1.innerHTML = '傍晚好';
+        } else if (h<22) {
+            div1.innerHTML = '晚上好';
+        } else {
+            div1.innerHTML = '夜里好';
+        }
+    }
+
+
+</script>
+</body>
+</html>

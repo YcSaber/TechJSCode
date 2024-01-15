@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom下1</title>
+</head>
+<body>
+<button>按钮1</button>
+<button>按钮2</button>
+<button>按钮3</button>
+<button>按钮4</button>
+<button>按钮5</button>
+
+<script>
+    // 获取元素btns为伪数组
+    let btns = document.getElementsByTagName('button');
+    // 通过循环遍历为每一个btns的元素绑定事件
+    for (let i=0;i<btns.length;i++) {
+        btns[i].onclick = function () {
+            // 利用循环实现排他思想
+            // 点击事件触发后首先先吧所有按钮的颜色去掉
+            for (let j=0;j<btns.length;j++) {
+                btns[j].style.backgroundColor = '';
+            }
+            // 清空后设置当前点击元素的背景颜色
+            this.style.backgroundColor = 'pink';
+        }
+    }
+
+
+
+
+
+</script>
+</body>
+</html>

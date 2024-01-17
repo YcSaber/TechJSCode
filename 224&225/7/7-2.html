@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom下2</title>
+    <style>
+        div{
+            height: 300px;
+            width: 400px;
+            background: #42e115;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<script>
+    // 根据系统的不同时间来判断，所以我们需要用到日期对象
+    let h = new Date().getHours();
+    // 1。获取元素
+    let div1 = document.querySelector('div');
+    // 2.改为通过点击提示问候语
+    div1.onclick = function () {
+        if (h<6) {
+            this.innerHTML = '凌晨好';
+        } else if (h<9) {
+            this.innerHTML = '早上好';
+        } else if (h<12) {
+            this.innerHTML = '上午好';
+        } else if (h<14) {
+            this.innerHTML = '中午好';
+        } else if (h<17) {
+            this.innerHTML = '下午好';
+        } else if (h<19) {
+            this.innerHTML = '傍晚好';
+        } else if (h<22) {
+            this.innerHTML = '晚上好';
+        } else {
+            this.innerHTML = '夜里好';
+        }
+    }
+</script>
+</body>
+</html>

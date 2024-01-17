@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom下1</title>
+</head>
+<body>
+<button>按钮1</button>
+<button>按钮2</button>
+<button>按钮3</button>
+<button>按钮4</button>
+<button>按钮5</button>
+
+<script>
+    // 1.获取所有按钮元素，返回的是伪数组
+    let btns = document.getElementsByTagName('button');
+    // 通过循环遍历为每个按钮注册事件
+    for (let i=0;i<btns.length;i++) {
+        btns[i].onclick = function () {
+            // 通过循环使用排他思想先把所有的样式去除
+            for (let j=0;j<btns.length;j++) {
+                btns[j].style.backgroundColor = '';
+            }
+            // 排他思想过后在对应设置具体按钮的背景颜色
+            btns[i].style.backgroundColor = 'pink';
+        };
+    }
+
+
+
+
+
+</script>
+</body>
+</html>

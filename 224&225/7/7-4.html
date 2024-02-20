@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom下3</title>
+    <style>
+        .message{
+            display: inline-block;
+            color: #999;
+            padding-left: 20px;
+            background: url("img/mess.png") no-repeat left center;
+        }
+        .right{
+            color: green;
+            background-image: url("img/right.png");
+        }
+        .wrong{
+            color: red;
+            background-image: url("img/wrong.png");
+        }
+    </style>
+</head>
+<body>
+<div class="pwd">
+    <input type="password" class="ipt" maxlength="16">
+    <p class="message">请输入6-16位密码</p>
+</div>
+<script>
+    // input绑定失去焦点事件，根据内容长度做p标签的样式修改
+    // 采取className修改样式
+    // 1.获取元素
+    let ipt = document.querySelector('.ipt');
+    let message = document.querySelector('.message');
+    // 2.绑定失焦事件
+    ipt.onblur = function () {
+        // 根据input里面值的长度设定p标签样式
+        if (this.value.length<6) {
+            message.innerHTML = '输入错误，请输入6-16位长度的密码';
+            message.className = 'message wrong';
+        }else {
+            message.innerHTML = '输入正确';
+            message.className = 'message right';
+        }
+    }
+
+</script>
+</body>
+</html>

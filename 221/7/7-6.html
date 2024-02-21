@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom下6</title>
+</head>
+<body>
+<!--<textarea name="id" id="" cols="30" rows="10"></textarea>-->
+<!--<button id="btn1">发布</button>-->
+<!--<ul></ul>-->
+
+
+<!--<ul id="myList">-->
+    <!--<li>苹果</li>-->
+    <!--<li>香蕉</li>-->
+    <!--<li>橘子</li>-->
+    <!--<li>葡萄</li>-->
+<!--</ul>-->
+<!--<h3>今天吃什么</h3>-->
+<!--<ul id="op"></ul>-->
+
+
+<a href="https://www.baidu.com">百度一下</a>
+<script>
+    // // 点击button，获取到textarea里面的内容，将内容添加到ul中
+    // // 1.获取元素
+    // let btn = document.querySelector('#btn1');
+    // let text = document.querySelector('textarea');
+    // let ul = document.querySelector('ul');
+    // // 2.绑定事件
+    // btn.onclick = function () {
+    //     console.log(text.value);
+    //     // 创建元素
+    //     let li = document.createElement('li');
+    //     // 将内容写入进创建的元素中
+    //     li.innerHTML = text.value +'<button class="del">删除</button>';
+    //     // 添加元素至ul里
+    //     // ul.appendChild(li);
+    //     ul.insertBefore(li,ul.children[0]);
+    //
+    //     let del = document.querySelectorAll('.del');
+    //     for (let i=0;i<del.length;i++) {
+    //         del[i].onclick = function () {
+    //             ul.removeChild(this.parentNode);
+    //         }
+    // }
+    // }
+
+
+
+    // // 1.获取元素
+    // let myList = document.querySelector('#myList');
+    // let lis = myList.querySelectorAll('li');
+    // for (let i=0;i<lis.length;i++) {
+    //     lis[i].onclick = function (e) {
+    //         let cloneItem = this.cloneNode(true);
+    //         document.getElementById('op').appendChild(cloneItem);
+    //         e = e || window.event;
+    //         let target = e.target || e.srcElement;
+    //         console.log(e);
+    //         console.log(this);
+    //     }
+    // }
+
+
+
+
+    // 阻止默认事件
+    // 1.获取元素
+    let a = document.querySelector('a');
+    // // 标准浏览器事件监听注册事件
+    // a.addEventListener('click',function (e) {
+    //     // dom标准写法，阻止默认事件，早期版本不支持
+    //     e.preventDefault();
+    // });
+    //传统事件注册方式
+    a.onclick = function (e) {
+        e.preventDefault();
+        e.returnValue;  //早期版本浏览器使用方法
+    }
+
+</script>
+</body>
+</html>

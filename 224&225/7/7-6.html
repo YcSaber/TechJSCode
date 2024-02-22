@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom下6</title>
+</head>
+<body>
+<!--<textarea name="id" id="" cols="30" rows="10"></textarea>-->
+<!--<input type="button" value="发布" class="pub">-->
+<!--<ul></ul>-->
+
+
+<!--<ul id="myList">-->
+    <!--<li>烤肉拌饭</li>-->
+    <!--<li>麻辣烫</li>-->
+    <!--<li>过桥米线</li>-->
+    <!--<li>炸鸡</li>-->
+<!--</ul>-->
+<!--<h4>今天吃什么</h4>-->
+<!--<ul id="op"></ul>-->
+
+
+<a href="http://www.baidu.com">百度一下</a>
+<script>
+    // // 点击按钮，获取文本框中的文本内容，
+    // // 新建li放入ul中
+    // // 删除功能：每次新增内容后面都有删除键，点击删除对应留言
+    // // 1。获取元素
+    // let btn = document.querySelector('.pub');
+    // let text = document.querySelector('textarea');
+    // let ul = document.querySelector('ul');
+    // // 2.绑定事件
+    // btn.onclick = function () {
+    //     // 创建节点
+    //     let li = document.createElement('li');
+    //     // 给新建的节点添加内容
+    //     li.innerHTML = text.value + '<input type="button" value="删除" class="del">';
+    //     // 把建好的节点放在对应位置
+    //     // ul.appendChild(li);
+    //     ul.insertBefore(li,ul.children[0]);
+    //     text.value = '';
+    //     // 删除功能
+    //     let del = document.querySelectorAll('.del');
+    //     for (let i=0;i<del.length;i++) {
+    //         del[i].onclick = function () {
+    //             ul.removeChild(this.parentNode);
+    //         }
+    //     }
+    // };
+
+
+
+    // // 1。获取元素
+    // let myList = document.getElementById('myList');
+    // let lis = myList.querySelectorAll('li');
+    // let op = document.getElementById('op');
+    // // 2.绑定事件
+    // for (let i=0;i<lis.length;i++) {
+    //     lis[i].onclick = function (e) {
+    //         let cloneItem = this.cloneNode(true);
+    //         op.appendChild(cloneItem);
+    //         e = e || window.event;
+    //         let target = e.target || e.srcElement;
+    //         console.log(target);
+    //         console.log(this);
+    //     }
+    // }
+
+    // 阻止默认事件
+    let a = document.querySelector('a');
+    a.addEventListener('click',function (e) {
+        e.preventDefault();
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bom2</title>
+    <style>
+        .div1{
+            width: 400px;
+            height: 200px;
+            background: #f52771;
+        }
+    </style>
+</head>
+<body>
+<!--<div class="div1"></div>-->
+<!--<div>-->
+    <!--<span>请输入手机号码：</span>-->
+    <!--<input type="tel">-->
+    <!--<button>发送验证码</button>-->
+<!--</div>-->
+<script>
+    // let div1 = document.querySelector('.div1');
+    // // 调整窗口大小事件
+    // window.addEventListener("resize", function () {
+    //     if (window.innerWidth<=650) {
+    //         div1.style.width = '200px';
+    //         div1.style.height = '100px';
+    //         div1.style.backgroundColor = '#b35aff';
+    //     } else {
+    //         div1.style.width = '400px';
+    //         div1.style.height = '200px';
+    //         div1.style.backgroundColor = '#f52771';
+    //
+    //     }
+    // })
+
+
+    // function f() {
+    //     alert('setTimeout');
+    // }
+    // let timer1 = setTimeout(f,3000);
+    // clearTimeout(timer1);
+    // let timer2 = setInterval(function () {
+    //     console.log('ffffff');
+    // },1000);
+
+
+    // let div1 = document.querySelector('.div1');
+    // let timer1 = setTimeout(function () {
+    //     div1.style.display = 'none';
+    // },5000);
+
+
+    // let btn = document.querySelector('button');
+    // btn.addEventListener('click',function () {
+    //     let time = 60;
+    //     btn.disabled = true;
+    //     let timer1 = setInterval(function () {
+    //         if (time===0) {
+    //             btn.innerHTML = '发送验证码';
+    //             btn.disabled = false;
+    //             clearInterval(timer1);
+    //         } else {
+    //             time--;
+    //             btn.innerHTML = time+'秒后重新获取';
+    //         }
+    //     },1000);
+    // })
+
+    // // 全局作用域以及普通函数中this指向
+    // console.log(this);
+    // function f() {
+    //     console.log(this);
+    // }
+    // f();
+    // // 在方法中调用时this指向
+    // const o = {
+    //     say:function () {
+    //         console.log(this);
+    //     }
+    // };
+    // o.say();
+    // // 构造函数中this指向
+    // function f1() {
+    //     console.log(this);
+    // }
+    // let fun = new f1();
+
+    console.log(1);
+    setTimeout(function () {
+        console.log(2);
+    },0);
+     console.log(3);
+</script>
+</body>
+</html>

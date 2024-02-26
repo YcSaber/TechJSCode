@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom下7</title>
+    <style>
+        img{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<!--<div class="father">父元素-->
+    <!--<div class="son">子元素</div>-->
+<!--</div>-->
+
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+</ul>
+<img src="img/angel.gif" alt="">
+<input type="text">
+<script>
+    // // 阻止事件冒泡
+    // let father = document.querySelector('.father');
+    // let son = document.querySelector('.son');
+    // son.addEventListener('click',function (e) {
+    //     alert('son');
+    //     // 阻止事件冒泡语句（标准浏览器）
+    //     e.stopPropagation();
+    // });
+    // father.addEventListener('click',function () {
+    //     alert('father');
+    // })
+
+
+    // // 事件委托
+    // let ul = document.querySelector('ul');
+    // ul.addEventListener('click',function (e) {
+    //     e.target.style.backgroundColor = '#15f9cc';
+    // });
+    //
+    // document.addEventListener('mousemove',function (e) {
+    //     console.log(e.clientX);
+    //     console.log(e.pageX);
+    //     console.log(e.screenX);
+    // })
+
+
+    let pic = document.querySelector('img');
+    document.addEventListener('mousemove',function (e) {
+        let x = e.pageX;
+        let y = e.pageY;
+        console.log(x,y);
+        pic.style.left = x-40+'px';
+        pic.style.top = y-35+'px';
+    });
+
+    let search = document.querySelector('input');
+    document.addEventListener('keyup',function (e) {
+        if (e.key==='s'||e.key==='S') {
+            search.focus();
+        }
+    });
+
+</script>
+</body>
+</html>

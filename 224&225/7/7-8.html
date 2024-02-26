@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom下8</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .search{
+            margin: 50px;
+            width: 250px;
+            position: relative;
+        }
+        .con{
+            display: none;
+            width: 150px;
+            border: 1px solid rgba(0,0,0,.2);
+            box-shadow: 0 2px 4px rgba(0,0,0,.2);
+            position: absolute;
+            left: 85px;
+            top: -30px;
+            font-size: 19px;
+            line-height: 16px;
+            padding: 5px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="search">
+    <div class="con"></div>
+    <label>
+        快递单号：
+        <input type="text" class="num" placeholder="请输入您的快递单号">
+    </label>
+</div>
+<script>
+    // 输入内容时，上方盒子会跟着内容显示一样的内容，
+    // 内容为空时隐藏上方盒子
+    let con = document.querySelector('.con');
+    let num = document.querySelector('.num');
+    num.addEventListener('keyup',function () {
+        if (this.value !=='') {
+            con.style.display = 'block';
+            con.innerText = this.value;
+        } else {
+            con.style.display = 'none';
+        }
+    });
+    num.addEventListener('blur',function () {
+        con.style.display = 'none';
+    });
+    num.addEventListener('focus',function () {
+        if (this.value !== '') {
+            con.style.display = 'block';
+        }
+    })
+
+
+</script>
+</body>
+</html>

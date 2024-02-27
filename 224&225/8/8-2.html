@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bom2</title>
+</head>
+<body>
+<div id="time"></div>
+<input type="button" value="停止" class="btn">
+<script>
+    // let ua = window.navigator.userAgent;
+    // console.log(ua);
+
+    let time = document.getElementById('time');
+    let btn = document.querySelector('.btn');
+    let autoTime = setInterval(timeShow,1000);
+    btn.addEventListener('click',function () {
+       clearInterval(autoTime);
+    });
+    timeShow();
+    function timeShow() {
+        let today = new Date(); //获取系统当前时间
+        let year = today.getFullYear(); //获取年份
+        let month = today.getMonth() +1;    //获取月份
+        let date = today.getDate(); //获取日期
+        let week = today.getDay();  // 获取星期
+        let hour = today.getHours();    //获取小时
+        let minute = today.getMinutes();   //获取分钟
+        let second = today.getSeconds();    //获取秒数
+        // 修改格式为 *年*月*日星期* **：**：**
+        year = year+'年';
+        month<10 ? month='0'+month+'月' : month=month+'月';
+        date<10 ? date='0'+date+'日' : date=date+'日';
+        let weeks = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+        week = weeks[week]+'';
+        hour<10 ? hour='0'+hour+':' : hour=hour+':';
+        minute<10 ? minute='0'+minute+':' : minute=minute+':';
+        if (second<10) {
+            second = '0'+second;
+        }
+        let timeString = year+month+date+week+hour+minute+second;
+        time.innerHTML = timeString;
+
+    }
+
+</script>
+</body>
+</html>

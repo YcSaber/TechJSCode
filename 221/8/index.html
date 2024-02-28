@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div></div>
+<script>
+    let div = document.querySelector('div');
+    console.log(location.search);
+    // 去掉search中的？
+    let params = location.search.substr(1);
+    console.log(params);
+    // 把字符串分割成数组
+    let arr = params.split('=');
+    console.log(arr);
+    div.innerHTML = arr[1]+'欢迎您';
+</script>
+</body>
+</html>

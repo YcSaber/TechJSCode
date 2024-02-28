@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bom3</title>
+</head>
+<body>
+<div id="time"></div>
+<input type="button" value="停止" class="btn">
+<script>
+    // let msg = window.navigator.userAgent;
+    // console.log(msg);
+
+
+    let time = document.getElementById('time');
+    let btn = document.querySelector('.btn');
+    let autoTime = setInterval(timeShow,1000);
+    let flag = 1;   //判断是否开启计时器
+    btn.addEventListener('click',function () {
+        if (flag ===1) {
+            clearInterval(autoTime);
+            flag=0;
+            btn.value = '开启';
+        } else {
+            autoTime = setInterval(timeShow,1000);
+            flag=1;
+            btn.value = '停止';
+        }
+    });
+    timeShow();
+    function timeShow() {
+        let now = new Date();   //获取当前时间
+        let year = now.getFullYear();   //获取年份
+        let month = now.getMonth() + 1; //获取月份
+        let date = now.getDate();   //获取天数
+        let hours = now.getHours(); //获取小时
+        let minute = now.getMinutes();  //获取分钟
+        let second = now.getSeconds();  //获取秒数
+        let week = now.getDay();    //获取星期（0-6）
+
+        if (hours===9 && minute===2 && second ===0) {
+            alert('该起床了');
+        }
+        // 修改时钟显示格式
+        year = year+'年';
+        month<10 ? month='0'+month+'月' : month=month+'月';
+        date<10 ? date='0'+date+'日' : date=date+'日';
+        let weeks = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+        week = weeks[week] + ' ';
+        // 修改时分秒格式
+        hours<10 ? hours='0'+hours+':' : hours=hours+':';
+        minute<10 ? minute='0'+minute+':' : minute=minute+':';
+        if (second<10) {
+            second = '0' + second;
+        }
+        // 将年月日星期时分秒拼接到一起
+        let timeString = year+month+date+week+hours+minute+second;
+        time.innerHTML = timeString;
+
+
+    }
+
+
+</script>
+</body>
+</html>

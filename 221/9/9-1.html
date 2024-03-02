@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>9-1</title>
+    <style>
+        #box{
+            width: 300px;
+            height: 200px;
+            background-color: rgba(230,4,155,0.8);
+            position: absolute;
+            left: 50px;
+            top: 30px;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<script>
+    let box = document.getElementById('box');
+    // 获取盒子的宽度和高度
+    console.log(box.offsetWidth,box.offsetHeight);
+    let left = box.offsetLeft;
+    let top1 = box.offsetTop;
+    box.addEventListener('mousemove',function (e) {
+        // 计算鼠标指针在盒子内部的坐标
+        let x = e.pageX - left;
+        let y = e.pageY - top1;
+        console.log('x坐标：'+x+'y坐标：'+y);
+    })
+</script>
+</body>
+</html>

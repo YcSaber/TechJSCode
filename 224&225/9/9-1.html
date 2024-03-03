@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>9-1</title>
+    <style>
+        #box{
+            width: 300px;
+            height: 200px;
+            background-color: #42e115;
+            position: absolute;
+            top: 50px;
+            left: 80px;
+        }
+        .login_header{
+            width: 100%;
+            text-align: center;
+            font-size: 22px;
+            position: absolute;
+        }
+        .modal{
+            width: 550px;
+            height: 200px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 99;
+            cursor: move;
+            transform: translate(-50%,-50%);
+            box-shadow: 0 0 20px #ddd;
+            background-color: #fff;
+            display: none;
+        }
+        .modal form{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+        }
+        .modal form .item1{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+        .modal form .item2{
+            margin: 0 auto;
+            width: 75%;
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .username{
+            margin-left: 15px;
+        }
+        .vip{
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 3px 40px;
+            background-color: orange;
+            color: #fff;
+            cursor: pointer;
+        }
+        .close{
+            position: absolute;
+            right: 0;
+            top: -40px;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            text-align: center;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            line-height: 17px;
+            cursor: pointer;
+        }
+        .login_bg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ccc;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<!--<div id="box"></div>-->
+<div class="login_bg"></div>
+<div class="modal">
+    <form action="#">
+        <div class="item1">登录会员</div>
+        <div class="item2">
+            <div class="username">
+                <label for="username">用户名：</label>
+                <input type="text" name="username">
+            </div>
+            <div>
+                <label for="password">登录密码：</label>
+                <input type="password" name="password">
+            </div>
+            <div class="item1">
+                <div class="vip">登录</div>
+            </div>
+        </div>
+    </form>
+    <div class="close">x</div>
+</div>
+<div class="login_header">点击登录</div>
+<script>
+    // let box = document.querySelector('#box');
+    // box.addEventListener('mousemove',function (e) {
+    //     let left = box.offsetLeft;
+    //     let top = box.offsetTop;
+    //     // 计算鼠标指针在盒子内部的坐标
+    //     let x = e.pageX - left;
+    //     let y = e.pageY - top;
+    //     console.log('x坐标：'+x+'y坐标'+y);
+    // })
+
+
+    // 获取元素
+    let modal = document.querySelector('.modal');
+    let close = document.querySelector('.close');
+    let login = document.querySelector('.login_header');
+    let bg = document.querySelector('.login_bg');
+    login.addEventListener('click',function () {
+        modal.style.display = 'block';
+        bg.style.display = 'block';
+    });
+    close.addEventListener('click',function () {
+        modal.style.display = 'none';
+        bg.style.display = 'none';
+    });
+    modal.addEventListener('mousedown',function (e) {
+        let x = e.pageX - modal.offsetLeft;
+        let y = e.pageY - modal.offsetTop;
+        let move = function (e) {
+            console.log(e.pageX-x);
+            console.log(e.pageY-y);
+            modal.style.left = e.pageX - x + 'px';
+            modal.style.top = e.pageY - y + 'px';
+        };
+        document.addEventListener('mousemove',move);
+        document.addEventListener('mouseup',function () {
+            document.removeEventListener('mousemove',move);
+        })
+
+    });
+
+</script>
+</body>
+</html>
